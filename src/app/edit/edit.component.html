@@ -1,0 +1,16 @@
+<div class="grid-container wiki">
+  <div class="grid-x">
+    <div class="small-12 cell">
+      <form [formGroup]="editPageForm" (ngSubmit)="savePage()" *ngIf="!pending">
+        <label *ngIf="newPage">Slug
+          <input type="text" placeholder="Slug" formControlName="slug">
+        </label>
+        <label>
+          Page Content
+          <textarea placeholder="Page Content" formControlName="content"></textarea>
+        </label>
+        <button class="button">Save</button>
+      </form>
+    </div>
+  </div>
+</div>

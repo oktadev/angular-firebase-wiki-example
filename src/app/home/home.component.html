@@ -1,0 +1,11 @@
+<div class="grid-container wiki">
+  <div class="grid-x">
+    <div class="small-12 cell">
+      <div class="manage-post" *ngIf="isAuthenticated">
+        <button class="button" [routerLink]="['/edit', slug]">Edit</button>
+        <button class="button" routerLink="/edit">Create</button>
+      </div>
+      <markdown [data]="content"></markdown>
+    </div>
+  </div>
+</div>
